@@ -113,10 +113,8 @@ class Tasks
         }
         int length = int.Parse(Console.ReadLine());
         (int feet, int inch) = ConvertCmToFeetAndInches(length);
-        int[] rez = new int[2];
-        rez[0] = feet;
-        rez[1] = inch;
+        int[] rez = [feet, inch];
         Console.WriteLine(feet + " " + inch);
         return rez;
-    }
+    } 
 }
