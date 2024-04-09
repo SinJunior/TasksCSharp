@@ -116,5 +116,26 @@ class Tasks
         int[] rez = [feet, inch];
         Console.WriteLine(feet + " " + inch);
         return rez;
-    } 
+    }
+
+    public int Task_2007()
+    {
+        int number = int.Parse(Console.ReadLine());
+        int Count = 0;
+
+        while (number != 0)
+        {
+            if (number % 2 == 0)
+            {
+                number = number / 2;
+                Count++;
+            }
+            else
+            {
+                break;
+            }
+        }
+        Console.WriteLine(Count);
+        return Count;
+    }
 }
