@@ -138,4 +138,38 @@ class Tasks
         Console.WriteLine(Count);
         return Count;
     }
+
+    public int Task_2008()
+    {
+        string[] valuesOne = Console.ReadLine().Split(' ');
+
+        int arrayLangth = int.Parse(valuesOne[0]), 
+            numberCargoes = int.Parse(valuesOne[1]);
+
+        int mass = 0, 
+            count = 0;
+        
+
+        string[] valuesTwo = Console.ReadLine().Split(' ');
+        int[] ArrayOne = new int[arrayLangth];
+        ArrayOne = Array.ConvertAll(valuesTwo, int.Parse);
+
+        for (int i = 0; i < arrayLangth; i++)
+        {
+            if(ArrayOne[i]+ mass <= numberCargoes)
+            {
+                mass += ArrayOne[i];
+                count++;
+            }
+        }
+
+        Console.WriteLine(count +" "+ mass);
+
+        return arrayLangth;
+    }
+
+    //public int Task_2008()
+    //{
+    //    return;
+    //}
 }
